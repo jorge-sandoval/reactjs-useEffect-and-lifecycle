@@ -1,5 +1,5 @@
-import './App.css';
 import { useState } from 'react';
+import './App.css';
 import Child from './Child';
 
 function App() {
@@ -8,7 +8,9 @@ function App() {
   return (
     <>
       <div>
-        <button onClick={() => setShow(!show)}>Show/Hide</button>
+        <button onClick={() => setShow((prevShow) => !prevShow)}>
+          Show/Hide
+        </button>
         {show && <Child />}
       </div>
     </>
